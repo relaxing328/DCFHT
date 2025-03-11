@@ -12,4 +12,7 @@ Experiment_1 corresponds to Section 5.2; Experiment_2 corresponds to Section 5.3
   skmultiflow (We have modified the original codes in https://scikit-multiflow.github.io/. And the modified library is provided as a rar file.)
   python 3.7
 
-##
+## Run Example
+In each code folder, we provide three files for different running examples:
+  "main.py" is used to run datasets without discrete features;
+  "main_OVFM.py" is used to run datasets handled by OVFM algorithm
