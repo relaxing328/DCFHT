@@ -5,7 +5,6 @@ from copy import deepcopy
 from tqdm import tqdm
 from findAttr import findAttrAll, updateAttr, delSilent, updateModelTree, updateModelTreeIdx, get_ord_indices, delAttrTree
 from skmultiflow.drift_detection.base_drift_detector import BaseDriftDetector
-from sklearn.metrics import balanced_accuracy_score
 
 class OCFHT_drift_new():
     def __init__(self,
@@ -62,7 +61,7 @@ class OCFHT_drift_new():
             self.instances_seen = self.background_learner.instances_seen
             self.feature_sta = self.background_learner.feature_sta
             self.background_learner = None
-        else: # 不会运行？
+        else:
             self.classifier.reset()
             self.created_on = instances_seen
             self.drift_detection.reset()
@@ -108,9 +107,7 @@ class OCFHT_drift_new():
 
         end_Time = time.time()
         runtime = end_Time - start_time
-
-        balAcc = balanced_accuracy_score(np.array(y_actual).reshape(-1, 1), np.array(y_pred).reshape(-1, 1))
-        return self.classifier, self.err_count, self.correct_cnt, runtime, acc_all, balAcc
+        return self.classifier, self.err_count, self.correct_cnt, runtime, acc_all
 
     def predict(self, x_t, y_t, idx_t, x_t_, all_ord_indices):
         self.instances_seen += 1
