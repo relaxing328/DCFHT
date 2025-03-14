@@ -81,7 +81,7 @@ def update_child(tree, tree_new):
             para_fea = {}#findAllLeafAttr(tree, {}) #
             tree = leaf(para_fea)
         else:
-            if tree_new.split_attr >= 5: 
+            if tree_new.split_attr >= 0: 
                 tree.split_attr = tree_new.split_attr
             attrTree_child = len(tree.children)
             for i in range(len(tree_new.children)):
