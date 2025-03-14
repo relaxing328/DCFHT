@@ -105,7 +105,6 @@ class OCFHT_drift_new():
 
         end_Time = time.time()
         runtime = end_Time - start_time
-
         return self.classifier, self.err_count, self.correct_cnt, runtime, acc_all
 
     def predict(self, x_t, y_t, idx_t, x_t_):
