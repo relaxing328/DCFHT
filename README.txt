@@ -9,7 +9,7 @@ Experiment_1 corresponds to Section 5.2; Experiment_2 corresponds to Section 5.3
   pandas
   openpyxl
   os
-  skmultiflow (We have modified the original codes in https://scikit-multiflow.github.io/. And the modified library is provided as a rar file.)
+  skmultiflow (We have modified the original codes provided in https://scikit-multiflow.github.io/. And the modified library is provided.)
   python 3.7
 
 ## Run Example
