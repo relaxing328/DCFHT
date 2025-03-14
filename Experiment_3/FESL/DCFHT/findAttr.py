@@ -60,7 +60,7 @@ def updateAttr(attrTree, attrTree_new):
             attrTree.tree = leaf(para_fea)
             attrTree.active_nodes_cnt -= 1
         else:
-            if attrTree_new.tree.split_attr >= 5:
+            if attrTree_new.tree.split_attr >= 0:
                 attrTree.tree.split_attr = attrTree_new.tree.split_attr
             attrTree_child = len(attrTree.tree.children)
             for i in range(len(attrTree_new.tree.children)):
