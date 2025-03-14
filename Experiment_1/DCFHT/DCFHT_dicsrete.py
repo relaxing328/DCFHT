@@ -61,7 +61,7 @@ class OCFHT_drift_new():
             self.instances_seen = self.background_learner.instances_seen
             self.feature_sta = self.background_learner.feature_sta
             self.background_learner = None
-        else: # 不会运行？
+        else:
             self.classifier.reset()
             self.created_on = instances_seen
             self.drift_detection.reset()
